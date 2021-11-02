@@ -7,6 +7,8 @@
     <title>글자 태그</title>
 </head>
 <body>
+    
+<h1>
     <!-- 제목 -->
     <h1>Header 1</h1>
     <!-- 첫번째로 큰 제목 글자 태그, 우선순위와 글자크기 -->
@@ -40,11 +42,39 @@
 
     <!-- 페이지 내부 이동 -->
     <a href="#alpha">Move to alpha</a>
-    <div style="margin-top: 1000px;">
+    <div style="margin-top: 500px;">
         <h1 id="alpha">alpha</h1>
+        <!-- 참고 : id 속성이 중복되면 먼저 나오는 태그로 이동. 따라서 같은 id값을 중복하여 사용하지 않는다. -->
     </div>
 
-    
+    <!-- 글자 형태 -->
+    <h1><b>ipsum dolor sit amet</b></h1>
+    <h1><i>ipsum dolor sit amet</i></h1>
+    <h1><small>ipsum dolor sit amet</small></h1>
+    <h1>ALPHA<sub>ipsum dolor sit amet</sub></h1>
+    <h1>ALPHA<sup>ipsum dolor sit amet</sup></h1>
+    <h1><ins>ipsum dolor sit amet</ins></h1>
+    <h1><del>ipsum dolor sit amet</del></h1>
+    <br />
+    <br />
+
+    <!-- 루비 문자 -->
+    <h3>
+        <ruby>
+            <span>振り仮名</span>
+            <rt>ふ　がな</rt>
+        </ruby>
+    </h3>
+    <!-- 루비 문자를 지원하지 않는 경우 rp 태그 이용 -> 振り仮名(ふ　がな)-->
+    <h3>
+        <ruby>
+            <span>振り仮名</span>
+            <rp>(</rp>
+            <rt>ふ　がな</rt>
+            <rp>)</rp>
+        </ruby>
+    </h3>
+    <!-- 지원하지 않는 태그가 있어도 텍스트가 정상적으로 출력은 됨 -->
 
 </body>
 </html>
