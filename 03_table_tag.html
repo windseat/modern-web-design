@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+</head>
+<body>
+    
+    <!-- 테이블 태그는 HTML 페이지에서 표를 만들 때 사용. 과거에는 레이아웃 구성에도 사용. 현재는 대부분 div 태그를 사용하여 레이아웃 구성. -->
+
+    <table border="1">
+        <tbody>
+        <!-- tbody 태그를 사용하지 않아도 브라우저에서 보여줄 때는 자동으로 생성 -->
+            <tr>
+                <!-- 표 내부의 행 태그 -->
+                    <th>Header 1</th>
+                    <!-- 행 내부의 제목 셀 태그 -->
+                    <th>Header 2</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <!-- 행 내부의 일반 셀 태그 -->
+                    <td>Data 1</td>
+                </tr>
+                <tr>
+                    <td>Data 2</td>
+                    <td>Data 2</td>
+                </tr>
+        </tbody>
+    </table>
+    
+    <br />
+    <br />
+
+    <table border="1">
+        <tr>
+            <th colspan="3">Table Head</th>
+            <!-- 컬럼 3개를 병합 -->
+            <th rowspan="3">Table Head</th>
+            <!-- 행 3개를 병합 -->
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td rowspan="2">Table Data</td>
+            <!-- 행 2개를 병합 -->
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <table border="1">
+        <caption>Caption</caption>
+        <colgroup>
+            <col span="2" style="background: red;" />
+            <!-- tbody에 속한 컬럼의 스타일을 지정 -->
+            <col style="background: blue;" />
+        </colgroup>
+        <thead style="background: green;">
+            <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+        </tbody>
+        <tfoot style="background: yellow;">
+            <tr>
+                <td>foot Data</td>
+                <td>foot Data</td>
+                <td>foot Data</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
