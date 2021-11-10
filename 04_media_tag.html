@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img audio video</title>
+</head>
+<body>
+    
+    <!-- img 태드 -->
+    <img src="https://via.placeholder.com/500x100.png" alt="가상 이미지 제공 사이트 placeholder.com" />
+    <br />
+    <br />
+
+    <img src="https://dummyimage.com/300.png" alt="가상 이미지 제공 사이트 dummyimage.com" />
+    <br />
+    <br />
+
+    <img src="/images/web-ge509b1461_1280.jpg" alt="pixabay.com에서 가져 온 무료이미지" width="300" />
+    <!-- / : 프로젝트 루트 폴더 기준 -->
+    <br />
+    <br />
+
+    <img src="images/web-ge509b1461_1280.jpg" alt="pixabay.com에서 가져 온 무료이미지" height="300" />
+    <img src="./images/web-ge509b1461_1280.jpg" alt="pixabay.com에서 가져 온 무료이미지" height="300" />
+    <!-- ./ : 현재 작업중인 파일이 위치한 동일 폴더 기준 -->
+    <br />
+    <br />
+
+    <img src="../modern-web-design/images/web-ge509b1461_1280.jpg" alt="파일이 존재하지 않습니다." width="400" />
+    <!-- ../ : 현재 작업중인 파일이 위치한 폴더의 상위폴더를 지정할 때 -->
+    <br />
+    <br />
+
+
+    <!-- audio 태그 -->
+    <audio src="abcd.mp3" controls autoplay></audio>
+    <!-- 
+        preload : 음악을 재생하기 전에 모두 불러올지 지정
+        autoplay : 자동재생할지 지정
+        loop : 반복할지 지정
+        controls : 재생 도구를 노출할지 지정
+     -->
+     <br />
+     <br />
+
+     <audio controls="controls">
+     <!-- XHTML식 표기방법. HTML5식으로는 controls만 써도 됨 -->
+        <source src="abcd.mp3" type="audio/mp3" />
+        <source src="abcd.ogg" type="audio/ogg" />
+     </audio>
+     <!-- mp3를 지원하지 않는 브라우저의 경우, source 태그 사용 -->
+     <!-- mp3 라이선스상 5000번이상 재생하는 경우 2500달러를 내도록 되어 있으므로 가급적 mp3를 사용하지 않는 것이 좋다. -->
+     <br />
+     <br />
+
+
+     <!-- video 태그 -->
+     <video controls="controls" poster="https://via.placeholder.com/640x360">
+     <!-- 
+        poster : 비디오 준비중일 때의 이미지 파일 경로 지정
+        preload : 재생하기 전에 모두 불러올지 지정
+        autoplay
+        loop
+        controls
+        width
+        height
+     -->
+        <source src="abcd.mp4" type="video/mp4">
+        <source src="abcd.webm" type="video/webm">
+        <source src="abcd.ogv" type="video/ogv">
+     </video>
+     <!-- 웹브라우저는 wmv 형식을 지원하지 않음. -->
+
+
+</body>
+</html>
