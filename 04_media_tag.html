@@ -72,7 +72,20 @@
         <source src="abcd.ogv" type="video/ogv">
      </video>
      <!-- 웹브라우저는 wmv 형식을 지원하지 않음. -->
+     <br />
+     <br />
+    
+     <!-- track 태그 -->
+     <video controls poster="https://via.placeholder.com/640x360">
+        <source src="abcd.mp4" type="video/mp4">
+        <source src="abcd.webm" type="video/webm">
+        <source src="abcd.ogv" type="video/ogv">
 
+        <track kind="subtitles" src="track.srt" srclang="ko" label="Korean" />
+        <track kind="subtitles" src="track.srt" srclang="en" label="English" />
+        <track kind="subtitles" src="track.srt" srclang="jp" label="Japanese" />
+        <!-- srt 파일은 html5 지원 자막파일. controls에 자막선택 표시 -->
+     </video>
 
 </body>
 </html>
