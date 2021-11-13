@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form input textarea select fieldset legend</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" name="search" />
+        <input type="submit" />
+    </form>
+    <br />
+    <br />
+
+    <form action="" method="get">
+    <!-- form 태그에 지정된 action 속성의 장소로 method 속성에 적힌 방식으로 정보를 전달 -->
+    <!-- get 방식은 URL 주소에 데이터를 입력하므로 크기가 한정 -->
+        <input type="text" name="search" />
+        <input type="submit" />
+    </form>
+
+    <form action="" method="post">
+        <input type="text" name="search" />
+        <input type="submit" />
+    </form>
+    <br />
+    <br />
+
+    <form>
+        <input type="text" name="name"><br />
+        <input type="password" name="password"><br />
+        <input type="file" name="file"><br />
+        <input type="submit">
+    </form>
+
+    <!-- input type - HTML4
+        button : 버튼
+        checkbox : 체크박스
+        file : 파일 입력 양식 생성
+        hidden : 보이지 않음
+        image : 이미지 형태를 생성
+        password : 비밀번호 입력 양식을 생성
+        radio : 라디오 버튼
+        reset : 초기화 버튼
+        submit : 제출 버튼
+        text : 글자 입력 양식
+    -->
+    <br />
+    <br />
+
+    <!-- label -->
+    <form action="">
+        <label for="name">이름</label>
+        <input id="name" type="text" />
+    </form>
+    <br />
+    <br />
+
+
+    <!-- HTML5 입력 양식 태드, 브라우저마다 지원 상태가 다름 -->
+    <form action="">
+        <input type="color" /><br />
+        <!-- 색상 선택 -->
+        <input type="date" /><br />
+        <!-- 일 선택 양식 -->
+        <input type="datetime"><br />
+        <!-- 날짜 선택 양식 -->
+        <input type="datetime-local"><br />
+        <!-- 지역 날짜 선택 양식 -->
+        <input type="email"><br />
+        <input type="month"><br />
+        <input type="number"><br />
+        <input type="range"><br />
+        <input type="search"><br />
+        <input type="tel"><br />
+        <input type="time"><br />
+        <input type="url"><br />
+        <input type="week">
+    </form>
+
+
+    <form action="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <!-- 
+            cols : 태그의 너비
+            rows : 태그의 높이
+        -->
+        <textarea name="" id="" cols="30" rows="10">TextArea Text</textarea>
+    </form>
+    <br />
+    <br />
+
+
+    <!-- select 태그 -->
+    <select name="" id="">
+        <option value="">김밥1</option>
+        <option value="">김밥2</option>
+        <option value="">김밥3</option>
+        <option value="">김밥4</option>
+    </select>
+    <br />
+    <br />
+
+    <select multiple="multiple" name="" id="">
+    <!-- mutiple : 여러개의 목록 선택 -->
+        <option value="">김밥1</option>
+        <option value="">김밥2</option>
+        <option value="">김밥3</option>
+        <option value="">김밥4</option>
+    </select>
+    <br />
+    <br />
+
+    <select name="" id="">
+        <optgroup label="김밥">
+        <!-- 선택 옵션을 묶을 때 사용 -->
+            <option value="">김밥1</option>
+            <option value="">김밥2</option>
+            <option value="">김밥3</option>
+        </optgroup>
+        <optgroup label="떡볶이">
+            <option value="">떡볶이1</option>
+            <option value="">떡볶이2</option>
+            <option value="">떡볶이3</option>
+        </optgroup>
+    </select>
+
+    <!-- select 태그 디자인이 그리 예쁘지 않아서 div와 자바스크립트로 따로 만들어 쓰는 경향 -->
+    <br />
+    <br />
+
+    <!-- fieldset, legend : 입력 양식을 설명하는 태그 -->
+    <form action="">
+        <fieldset>
+            <legend>입력양식</legend>
+            <label for="name">이름</label>
+            <input id="name" type="text" />
+            <input type="submit" />
+        </fieldset>
+    </form>
+    
+</body>
+</html>
