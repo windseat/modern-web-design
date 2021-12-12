@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태 선택자와 동위 선택자의 복합 활용</title>
+    <!-- 체크박스를 클릭했을 때 글자가 사라졌다가 다시 클릭하면 나타나는 CSS 스타일 -->
+
+    <style>
+        input[type=checkbox]:checked + div {
+            height: 0px;
+        }
+        div {
+            overflow: hidden; /* 이 속성이 있어야 효과가 적용됨 */
+            width: 650px;
+            height: 300px;
+            transition-duration: 1s; /* 서서히 사라졌다 서서히 나타남 */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <input type="checkbox" />
+    <div>
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet dolore enim repellat voluptatibus aliquid, corporis cumque quibusdam. Sapiente voluptatibus nisi deserunt doloremque ut porro sunt molestiae sint soluta, facere debitis!</p>
+    </div>
+
+</body>
+</html>
