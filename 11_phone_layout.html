@@ -21,8 +21,94 @@
         }
         #main_header > h1 {color: white;}
         #main_header > a, #main_header > label {display: block; height: 32px; position: absolute;}
-        #main_header > a.left {width: 62px; left: 5px; top: 7px;}
-        #main_header > label.right {width: 32px; right: 5px; top: 7px;}
+        #main_header > a.left {
+            width: 62px; left: 5px; top: 7px;
+            background: url('./resources/ch6/sprites.png');
+            background-position: 0 0;
+            text-indent: -99999px; /* 태그 내부의 글자를 화면 밖으로 밀어버림 */
+        }
+        #main_header > label.right {
+            width: 32px; right: 5px; top: 7px;
+            background: url('./resources/ch6/sprites.png');
+            background-position: -62px 0;
+            text-indent: -99999px;
+        }
+
+        #toggle {display: none;}
+        #toggle + #wrap > #toggle_gnb_wrap {display: none;}
+        #toggle:checked + #wrap > #toggle_gnb_wrap {display: block;}
+        #toggle_gnb_wrap {
+            background: #363636;
+            padding: 15px;
+        }
+        #toggle_gnb {
+            background: #FFFFFF;
+            padding: 5px;
+        }
+        #toggle_gnb > ul {overflow: hidden;}
+        #toggle_gnb > ul > li {
+            width: 80px;
+            float: left;
+        }
+
+        #top_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #b42111;
+        }
+        #top_gnb > div > a {
+            width: 25%;
+            float: left;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+        }
+
+        #bottom_gnb {
+            display: table;
+            /* 
+                display: table; table 태그와 같은 레이아웃을 갖습니다.
+                display: table-cell; td 태그와 같은 레이아웃을 갖습니다.
+             */
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        #bottom_gnb > div {
+            display: table-cell;
+            position: relative;
+        }
+        #bottom_gnb > div > a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        #bottom_gnb > div > a::before {
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px; /* 첫번째 라인을 화면 밖으로 밀어 버림 */
+            width: 1px; height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+
+        #section_header {padding: 20px;}
+        #section_article {padding: 10px;}
+
+        p.ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* 말줄임, 생략 */
+
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -36,6 +122,50 @@
             <!-- onClick="" 은 iOS 웹브라우저의 label 태그 버그 때문에 입력. label 터치시 반응하도록 -->
             <!-- iOS 웹브라우저는 ~ 선택자 사용할 수 없었다. 아직도 그런가? -->
         </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>h1</h1>
+                <time>2022-01-22</time>
+            </header>
+            <article id="section_article">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cupiditate beatae commodi ad consequuntur obcaecati atque, odio quasi? Eaque fuga aliquam, eum id ipsum praesentium assumenda? Nostrum iste eos beatae!</p>
+                <br />
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cupiditate beatae commodi ad consequuntur obcaecati atque, odio quasi? Eaque fuga aliquam, eum id ipsum praesentium assumenda? Nostrum iste eos beatae!</p>
+                <br />
+                <p class="ellipsis">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cupiditate beatae commodi ad consequuntur obcaecati atque, odio quasi? Eaque fuga aliquam, eum id ipsum praesentium assumenda? Nostrum iste eos beatae!</p>
+            </article>
+        </section>
+        <footer id="main_footer">
+            <h3>h3</h3>
+            <address>address</address>
+        </footer>
     </div>
 </body>
 </html>

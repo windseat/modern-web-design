@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태블릿 PC 레이아웃</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+        body {font-family: Arial, Helvetica, sans-serif;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+
+        body {min-width: 760px;}
+
+        #main_header {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 10px;
+            border-bottom: 1px solid black;
+            background: #1d4088;
+            color: white;
+        }
+
+        #main_gnb {overflow: hidden; border-bottom: 1px solid black; background: #32394a;}
+        #main_gnb > ul.left {overflow: hidden; float: left;}
+        #main_gnb > ul.right {overflow: hidden; float: right;}
+        #main_gnb > ul.left > li {float: left;}
+        #main_gnb > ul.right > li {float: left;}
+        #main_gnb a {
+            display: block;
+            padding: 10px 20px;
+            border-left: 1px solid #5f6673;
+            border-right: 1px solid #242a37;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <h1>h1</h1>
+    </header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">button1</a></li>
+            <li><a href="#">button2</a></li>
+            <li><a href="#">button3</a></li>
+            <li><a href="#">button4</a></li>
+            <li><a href="#">button5</a></li>
+            <li><a href="#">button6</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">button1</a></li>
+            <li><a href="#">button2</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
