@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 transition basic</title>
+
+    <style>
+        .box {width: 100px; height: 100px; background-color: orange; transition-duration: 2s;}
+        .box:hover {width: 200px; height: 300px;}
+        .box:active {background-color: red;}
+
+        #graph {width: 610px; border: 3px solid black;}
+        .bar {
+            width: 10px; height: 50px; background-color: orange; margin: 5px;
+
+            transition-property: background-color, width;
+            transition-duration: 1s, 10s;
+            /* background-color 속성은 1초동안, width 속성은 10초동안 변형 */
+
+            /*
+            transition: background-color 1s ease, width 5s linear 1s;
+            property duration function delay 순서로 입력
+            */
+        }
+        #graph:hover > .bar {width: 600px;}
+
+        .bar:nth-child(1) {
+            transition-delay: 0s;
+            transition-timing-function: linear;
+        }
+        .bar:nth-child(2) {
+            transition-delay: 1s;
+            transition-timing-function: ease;
+        }
+        .bar:nth-child(3) {
+            transition-delay: 2s;
+            transition-timing-function: ease-in;
+        }
+        .bar:nth-child(4) {
+            transition-delay: 3s;
+            transition-timing-function: ease-in-out;
+        }
+        .bar:nth-child(5) {
+            transition-delay: 4s;
+            transition-timing-function: ease-out;
+        }
+        .bar:nth-child(6) {
+            transition-delay: 5s;
+            transition-timing-function: cubic-bezier(0, 1, 1, 0);
+            /* https://cubic-bezier.com */
+        }
+
+        #graph:hover > .bar:nth-child(1) {background-color: red; width: 100px;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <h1>graph</h1>
+    <div id="graph">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+</body>
+</html>
